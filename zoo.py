@@ -10,6 +10,7 @@ class Animal:
 
     def __init__(self, name):
         self._name = name
+        self._voice = 'Hi, I\'m an animal'
 
     def get_name(self):
         """
@@ -18,13 +19,12 @@ class Animal:
         """
         return self._name
 
-    @staticmethod
-    def say():
+    def say(self):
         """
         Return the voice of animal.
         :return: str
         """
-        return 'Hi, I\'m an animal'
+        return self._voice
 
 
 class Dog(Animal):
@@ -33,12 +33,9 @@ class Dog(Animal):
     Inherits from Animal class.
     """
 
-    def say(self):
-        """
-        Return voice of dog.
-        :return: str
-        """
-        return "woof"
+    def __init__(self, name):
+        super().__init__(name)
+        self._voice = 'woof'
 
 
 class Cat(Animal):
@@ -47,12 +44,9 @@ class Cat(Animal):
     Inherits from Animal class.
     """
 
-    def say(self):
-        """
-        Return voice of cat.
-        :return: str
-        """
-        return "meow"
+    def __init__(self, name):
+        super().__init__(name)
+        self._voice = "meow"
 
 
 class Bird(Animal):
@@ -61,12 +55,9 @@ class Bird(Animal):
     Inherits from Animal class.
     """
 
-    def say(self):
-        """
-        Return voice of bird.
-        :return: str
-        """
-        return "tweet"
+    def __init__(self, name):
+        super().__init__(name)
+        self._voice = "tweet"
 
 
 class Zoo:
