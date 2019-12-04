@@ -1,7 +1,14 @@
+"""
+docstring
+"""
 import zoo
 
 
 def test_names():
+    """
+
+    :return:
+    """
     c = zoo.Cat("Tom")
     assert c.get_name() == 'Tom'
     d = zoo.Dog("Bandit")
@@ -11,8 +18,12 @@ def test_names():
 
 
 def test_voices():
+    """
+
+    :return:
+    """
     z = zoo.Zoo()
-    z.add(zoo.Cat("Tom"))
-    z.add(zoo.Dog("Bandit"))
-    z.add(zoo.Bird("Charlie"))
-    assert [animal.say() for animal in zoo.get_animals()] == ["meow", "woof", "tweet"]
+    z.add_animals(zoo.Cat("Tom"))
+    z.add_animals(zoo.Dog("Bandit"))
+    z.add_animals(zoo.Bird("Charlie"))
+    assert [animal.say() for animal in z.get_animals()] == ["meow", "woof", "tweet"]
