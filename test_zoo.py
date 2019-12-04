@@ -15,4 +15,4 @@ def test_voices():
     z.add(zoo.Cat("Tom"))
     z.add(zoo.Dog("Bandit"))
     z.add(zoo.Bird("Charlie"))
-    assert [animal.say() for animal in zoo.get_animals()] == ["meow", "woof", "tweet"]
+    assert [animal.get_say() for animal in z.get_animals()] == ["meow", "woof", "tweet"]
